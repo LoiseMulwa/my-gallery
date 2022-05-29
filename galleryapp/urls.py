@@ -16,9 +16,10 @@ Including another URLconf
 
 # from django.conf.urls import url,include
 from django.contrib import admin
-from django.urls import include, re_path
+from django.urls import re_path as url,include
 
 urlpatterns = [
-    re_path(r'^admin/', admin.site.urls),
-    re_path(r'^photos/',include('photos.urls'))
+    url(r'^admin/', admin.site.urls),
+    url(r'',include('photos.urls'))
+    # re_path(r'^photos/',include('photos.urls'))
 ]
