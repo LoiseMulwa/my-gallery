@@ -37,33 +37,26 @@
             </div>
             <div class="col-md-9">
                 <div class="row">
-                    <div>
+                    {% for photo in photos %}
+                    
                         <div class="card my-2" style="height: 150px;width: 250px;">
-                            <img src="https://images.unsplash.com/photo-1433086966358-54859d0ed716?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80"
+                            <img src="{{photo.image.url}}"
                                 class="card-img-top" alt="waterfall">
                             <div class="card-body">
-                                <p>Category: Nature</p>
+                                <p>Category: {{photo.category.name}}</p>
                             </div>
                             <a href="{% url 'photo' %}" class="btn btn-outline-dark btn-sm mt-1">View</a>
                         </div>
+                        {% empty %}
+                        <h3>No photo</h3>
 
-                    </div>
-                    <div>
-                        <div class="card my-2" style="height: 150px;width: 250px;">
-                            <img src="https://images.unsplash.com/photo-1433086966358-54859d0ed716?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80"
-                                class="card-img-top" alt="waterfall">
-                            <div class="card-body">
-                                <p>Category: Nature</p>
-                            </div>
-                            <a href="{% url 'photo' %}" class="btn btn-outline-dark btn-sm mt-1">View</a>
-                        </div>
+                        {% endfor %}
 
-                    </div>
+                    
+
                 </div>
             </div>
-            <div class="col-md-3">
 
-            </div>
         </div>
     </div>
 </body>

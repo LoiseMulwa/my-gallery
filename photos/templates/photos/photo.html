@@ -14,8 +14,8 @@
             <div class="col-md-4">
                 <a href="{%url 'gallery' %}" class="btn btn-dark my-5">Gallery</a>
                 <div style="height: 30vh;">
-                    <img src="https://images.unsplash.com/photo-1433086966358-54859d0ed716?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80" alt="">
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia tenetur qui odit, ullam architecto eius? Repudiandae, eum esse! Perferendis velit quasi praesentium unde libero consectetur nostrum eveniet rem, culpa sunt?</p>
+                    <img src="{{photo.image.url}}" alt="">
+                    <p>{{photo.description}}</p>
 
                 </div>
 
