@@ -27,24 +27,20 @@ def gallery(request):
     context = {'categories': categories, 'photos': photos}
     return render(request, 'photos/gallery.html' , context)
 
-def viewPhoto(request):
-    photo = Photo.objects.all()
+def viewPhoto(request, pk):
+    photo = Photo.objects.get(id=pk)
     return render(request, 'photos/photo.html',{'photos': photo} )
     
 
 def addPhoto(request):
     categories = Category.objects.all()
 
-    if request.method == 'POST':
-        # data.request.POST
-        image = request.FILES.get('image')
+    # if request.method == 'POST':
+    #     # data.request.POST
+    #     image = request.FILES.get('image')
 
-        # print('data:', data )
-        # print('image:', image )
-
-        
-
-
+    #     # print('data:', data )
+    #     # print('image:', image )
     context = {'categories': categories}
     return render(request,'photos/add.html', context)
 

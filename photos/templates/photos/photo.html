@@ -8,21 +8,23 @@
     integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
     <title>Photo</title>
 </head>
-<body>
+<body class="m-5">
     <div class="container">
-        <div class="row">
-            <div class="col-md-4">
-                <a href="{%url 'gallery' %}" class="btn btn-dark my-5">Gallery</a>
-                <div style="height: 30vh;">
-                    <img src="{{photo.image.url}}" alt="">
-                    <p>{{photo.description}}</p>
+        <div class="row justify-content-center">
+            <div class="col">
 
+                <a href="{% url 'gallery' %}" class="btn btn-dark my-3">Go Back</a>
+
+                <div style="height: 90vh;">
+                    <img style="max-width: 100%; max-height: 100%;" src="{{photo.image.url}}">
+
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quibusdam sit excepturi minima sapiente odio ad, quidem distinctio, officiis alias maxime quisquam perferendis quas, perspiciatis exercitationem incidunt in quos repellat dolorum?</p>
                 </div>
 
             </div>
         </div>
-
     </div>
-    
+
 </body>
+
 </html>

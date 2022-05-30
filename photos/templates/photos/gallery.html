@@ -34,7 +34,7 @@
 
 
                         <li class="list-group-item">
-                            <a href="{% url 'add' %}" class="btn btn-dark btn-sm">Add Photo</a>
+                            <a href="{% url 'add' %}" class="btn btn-dark btn-block btn-sm">Add Photo</a>
                         </li>
 
                     </ul>
@@ -52,7 +52,7 @@
                             <div class="card-body">
                                 <small>Category: {{photo.category.name}}</small>
                             </div>
-                            <a href="{% url 'photo' %}" class="btn btn-outline-dark btn-sm m-1">View</a>
+                            <a href="{% url 'photo' photo.id %}" class="btn btn-outline-dark btn-sm m-1">View</a>
                         </div>
                     </div>
                     {% empty %}
