@@ -14,7 +14,9 @@
             <div class="col-md-4">
                 <a href="{%url 'gallery' %}" class="btn btn-dark my-5">Gallery</a>
                 <div class="card">
-                    <form>
+                    <form method='POST' action="" enctype="multipart/form-data">
+
+                        {% csrf_token %}
                         <div class="form-group m-3">
                             <label >Description</label>
                             <input name="description" class="form-control-file" id="exampleFormControlFile1" placeholder="Enter description...">
@@ -33,11 +35,18 @@
 
                             </select>
                         </div>
+
+                        <div class="form-group m-3">
+                            <label >Create a new category</label>
+                            <input name="category_new" class="form-control-file" id="exampleFormControlFile1" placeholder="Create a new category...">
+                        </div>
                        
                         <div class="form-group m-3">
                           <label>Upload Image</label>
                           <input name="image" class="form-control-file" type="file">
                         </div>
+
+                        <button type='submit' class="btn btn-success m-3">Submit</button>
                       </form>
 
                 </div>

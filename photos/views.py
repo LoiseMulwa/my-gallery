@@ -1,7 +1,9 @@
+
 from multiprocessing import context
 # from tkinter import PhotoImage
 from unicodedata import category
 from django.shortcuts import render
+
 
 
 from .models import Category, Photo
@@ -25,6 +27,16 @@ def viewPhoto(request):
 
 def addPhoto(request):
     categories = Category.objects.all()
+
+    if request.method == 'POST':
+        # data.request.POST
+        image = request.FILES.get('image')
+
+        # print('data:', data )
+        # print('image:', image )
+
+        
+
 
     context = {'categories': categories}
     return render(request,'photos/add.html', context)
