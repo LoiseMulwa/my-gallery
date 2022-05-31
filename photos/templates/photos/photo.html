@@ -15,11 +15,24 @@
 
                 <a href="{% url 'gallery' %}" class="btn btn-dark my-3">Go Back</a>
 
-                <div style="height: 90vh;">
-                    <img style="max-width: 100%; max-height: 100%;" src="{{photo.image.url}}">
+                <div style="height: 80vh; ">
+                    <img style="max-width: 100%; max-height: 100%;" src="{{photo.image.url}}" alt="image">
 
-                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quibusdam sit excepturi minima sapiente odio ad, quidem distinctio, officiis alias maxime quisquam perferendis quas, perspiciatis exercitationem incidunt in quos repellat dolorum?</p>
+                    <div class="col-md-6 float-right" >
+                        <div class="card">
+                            <div class="card-body ">
+                                <p>Category: {{photo.category}}</p>
+                                <p>Description: {{photo.description}}</p>
+                            </div>
+                        </div>
+                      </div>
+
+                
                 </div>
+
+                <!-- <div class="col-md-6">
+                    <img style="height:350px;"src="{{photo.image.url}}" class="card-img-top" alt="..."></a>
+                  </div><br> -->
 
             </div>
         </div>
