@@ -1,5 +1,6 @@
 
 from multiprocessing import context
+from tkinter import Image
 # from tkinter import PhotoImage
 from unicodedata import category
 from django.shortcuts import render
@@ -43,5 +44,19 @@ def addPhoto(request):
     #     # print('image:', image )
     context = {'categories': categories}
     return render(request,'photos/add.html', context)
+
+
+def search_results(request):
+
+    if 'category' in request.GET and request.GET["category"]:
+        search_term = request.GET.get("category")
+        searched_photos = Category.search_by_category(search_term)
+        message = f"{search_term}"
+
+        return render(request, 'photos/search.html',{"message":message,"categories": searched_photos})
+
+    else:
+        message = "You haven't searched for any term"
+        return render(request, 'photos/search.html',{"message":message})
 
 

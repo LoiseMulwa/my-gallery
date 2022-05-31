@@ -9,16 +9,16 @@
     <title>Photo</title>
 </head>
 <body class="m-5">
-    <div class="container">
+    <div class="container-fluid" style="background-color: #36454F;">
         <div class="row justify-content-center">
             <div class="col">
 
-                <a href="{% url 'gallery' %}" class="btn btn-dark my-3">Go Back</a>
+                <a href="{% url 'gallery' %}" class="btn btn-light my-3">Go Back</a>
 
                 <div style="height: 80vh; ">
-                    <img style="max-width: 100%; max-height: 100%;" src="{{photo.image.url}}" alt="image">
+                    <img style="max-width: 100%; max-height: 100%;" src="{{photo.photo.url}}" alt="image">
 
-                    <div class="col-md-6 float-right" >
+                    <div class="col-md-6 float-right " >
                         <div class="card">
                             <div class="card-body ">
                                 <p>Category: {{photo.category}}</p>

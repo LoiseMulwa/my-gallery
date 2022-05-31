@@ -9,6 +9,7 @@ urlpatterns=[
     url(r'^$',views.gallery,name='gallery'),
     path('photo/<str:pk>/',views.viewPhoto, name='photo'),
     url('add/', views.addPhoto, name='add'),
+    url(r'^search/', views.search_results, name='search_results')
      
 
 ]
