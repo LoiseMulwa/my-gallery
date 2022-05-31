@@ -1,7 +1,5 @@
 
 from multiprocessing import context
-from tkinter import Image
-# from tkinter import PhotoImage
 from unicodedata import category
 from django.shortcuts import render
 
